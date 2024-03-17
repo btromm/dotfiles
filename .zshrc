@@ -1,15 +1,3 @@
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -19,6 +7,7 @@ alias ga="git add"
 alias gp="git push"
 alias bi="brew install"
 alias lsl="ls -l"
+alias mb="/Applications/MATLAB_R2023b.app/bin/matlab -nodesktop -nosplash"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -35,3 +24,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export STARSHIP_CONFIG=~/.dotfiles/starship.toml
+
+eval "$(starship init zsh)"
