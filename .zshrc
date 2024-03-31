@@ -28,3 +28,5 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
 
 eval "$(starship init zsh)"
+
+export PATH=$PATH:/Users/myco/.spicetify
