@@ -2073,8 +2073,6 @@
 			<string></string>
 			<key>Silence Bell</key>
 			<false/>
-			<key>Space</key>
-			<integer>0</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
@@ -2098,7 +2096,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>12</integer>
+			<integer>0</integer>
 			<key>Working Directory</key>
 			<string>/Users/myco</string>
 		</dict>
@@ -2150,10 +2148,6 @@
 	<integer>5</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
-	<key>TerminalMargin</key>
-	<integer>20</integer>
-	<key>TerminalVMargin</key>
-	<integer>10</integer>
 	<key>UseBorder</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>

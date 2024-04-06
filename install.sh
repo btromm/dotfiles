@@ -26,7 +26,7 @@ brew install starship
 brew install zsh-autosuggestion
 brew install zsh-fast-syntax-highlighting
 brew install zoxide
-
+brew install exa #ls replacement
 ### Apps
 brew install --cask alfred
 brew install --cask spotify
@@ -54,12 +54,12 @@ echo "(optional) Disable SIP for advanced yabai features/"
 echo "(optional) Add sudoer manually:\n '$(whoamai) ALL= (root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | awk "{print \$1;}") $(which yabai) --load-sa' to '/private/etc/sudoers.d/yabai'"
 echo "Installation complete...\n"
 
-ln -s ./vimrc ~/.vimrc
-ln -s ./zshrc ~/.zshrc
-ln -s ./yabairc ~/.yabairc
+ln -s ~/.dotfiles/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/yabai/.yabairc ~/.yabairc
 mkdir -p ~/.config/sketchybar
 mkdir -p ~/.config/sketchybar/plugins
 mkdir -p ~/.config/sketchybar/items
-ln -s ~/.dotfiles/sketchybarrc ~/.config/sketchybar/sketchybarrc
+cp ~/.dotfiles/sketchybar/sketchybarrc ~/.config/sketchybar/sketchybarrc
 cp ~/.dotfiles/sketchybar/plugins/* ~/.config/sketchybar/plugins/
 cp ~/.dotfiles/sketchybar/items/* ~/.config/sketchybar/items/

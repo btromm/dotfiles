@@ -1,0 +1,52 @@
+#!/bin/bash
+
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
+source "$CONFIG_DIR/colors.sh" # Load colors
+
+# Bar appearance
+bar=(
+  position=top
+  height=27
+  blur_radius=5
+  color=$BAR_COLOR
+  corner_radius=10
+  y_offset=5
+)
+sketchybar --bar "${bar[@]}"
+
+# Defaults
+default=(
+  icon.font="$FONT:Regular:$FONT_SIZE"
+  label.font="$FONT:Regular:$FONT_SIZE"
+  icon.color=$FONT_COLOR
+  label.color=$FONT_COLOR
+  padding_left=5
+  padding_right=5
+  label.padding_left=4
+  label.padding_right=10
+  icon.padding_left=10
+  icon.padding_right=4
+  background.color=$ITEM_BG_COLOR
+  background.corner_radius=10
+  background.height=25
+  background.border_width=1
+  background.border_color=$BORDER_COLOR
+
+)
+sketchybar --default "${default[@]}"
+
+# -- Left side items --
+#source $ITEM_DIR/mac.sh
+source $ITEM_DIR/front_app.sh
+#source $ITEM_DIR/spaces.sh
+source $ITEM_DIR/media.sh
+
+# -- Right Side Items --
+source $ITEM_DIR/calendar.sh
+source $ITEM_DIR/volume.sh
+source $ITEM_DIR/battery.sh
+source $ITEM_DIR/cpu.sh
+
+##### Force all scripts to run the first time (never do this in a script) #####
+sketchybar --update
