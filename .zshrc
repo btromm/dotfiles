@@ -11,7 +11,26 @@ alias ls="eza --icons --git -a"
 alias cd="z"
 alias nf="neofetch"
 
-# Conda
+# Starship
+export STARSHIP_CONFIG=~/.dotfiles/starship/starship.toml
+eval "$(starship init zsh)"
+
+# Spicetify
+export PATH=$PATH:/Users/myco/.spicetify
+    
+# ZSH utils
+#source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+eval "$(zoxide init zsh)"
+
+# Init ruby
+eval "$(rbenv init - zsh)"
+
+neofetch
+echo 'stay focused :)'
+#cat .art
+
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/myco/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -26,23 +45,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# Ruby
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-
-# Starship
-export STARSHIP_CONFIG=~/.dotfiles/starship/starship.toml
-eval "$(starship init zsh)"
-
-# Spicetify
-export PATH=$PATH:/Users/myco/.spicetify
-    
-# ZSH utils
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-eval "$(zoxide init zsh)"
-
-neofetch
-echo 'stay focused :)'
-
 

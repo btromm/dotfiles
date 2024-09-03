@@ -4,7 +4,7 @@ export WHITE=0xffffffff
 
 # -- BAR DEFAULTS --
 export BAR_HEIGHT=32
-export FONT="FiraCode Nerd Font"
+export FONT="SN Pro"
 export FONT_SIZE=13.0
 
 # -- Everforest --
