@@ -13,7 +13,7 @@ export STARSHIP_CONFIG=~/.dotfiles/starship/starship.toml
 eval "$(starship init zsh)"
 
 # ZSH UTILS
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(zoxide init zsh)"
 unset ZSH_AUTOSUGGEST_USE_ASYNC 
