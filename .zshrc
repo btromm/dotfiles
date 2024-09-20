@@ -1,35 +1,25 @@
-# my zshrc. it's messy right now.
+# mycelial ~~~
 
-## Aliases
+# Aliases
 alias g="git clone"
 alias gc="git commit -m"
 alias ga="git add"
 alias gp="git push"
-alias bi="brew install"
-alias mb="/Applications/MATLAB_R2023b.app/bin/matlab -nodesktop -nosplash"
 alias ls="eza --icons --git -a"
 alias cd="z"
-alias nf="neofetch"
+alias vim="nvim"
 
-# Starship
 export STARSHIP_CONFIG=~/.dotfiles/starship/starship.toml
 eval "$(starship init zsh)"
 
-# Spicetify
-export PATH=$PATH:/Users/myco/.spicetify
-    
-# ZSH utils
-#source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# ZSH UTILS
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(zoxide init zsh)"
+unset ZSH_AUTOSUGGEST_USE_ASYNC 
 
-# Init ruby
+# RUBY
 eval "$(rbenv init - zsh)"
-
-neofetch
-echo 'stay focused :)'
-#cat .art
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -45,4 +35,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+
 
