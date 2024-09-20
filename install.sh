@@ -17,6 +17,7 @@ brew install zsh-autosuggestions
 brew install zsh-fast-syntax-highlighting
 brew install zoxide #cd replacement
 brew install eza #ls replacement
+brew install fzf # super fast fuzzy finder
 
 ### Apps
 brew install --cask alfred
