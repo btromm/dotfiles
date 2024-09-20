@@ -126,6 +126,9 @@ alt-t = 'workspace T'
 alt-z = 'workspace Z'
 alt-m = 'workspace M'
 alt-w = 'workspace W'
+alt-v = 'workspace V'
+alt-n = 'workspace N'
+alt-d = 'workspace D'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -145,6 +148,9 @@ alt-shift-t = 'move-node-to-workspace T'
 alt-shift-z = 'move-node-to-workspace Z'
 alt-shift-m = 'move-node-to-workspace M'
 alt-shift-w = 'move-node-to-workspace W'
+alt-shift-v = 'move-node-to-workspace V'
+alt-shift-n = 'move-node-to-workspace N'
+alt-shift-d = 'move-node-to-workspace D'
 
 
 alt-shift-f = "fullscreen"
@@ -153,7 +159,7 @@ alt-shift-f = "fullscreen"
 alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
-
+alt-shift-backtick = 'focus-monitor --wrap-around next'
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
 
@@ -199,5 +205,41 @@ run = "move-node-to-workspace W"
 
 [[on-window-detected]]
 if.app-id = 'com.todesktop.230313mzl4w4u92'
+run = "move-node-to-workspace V"
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = "move-node-to-workspace V"
+
+[[on-window-detected]]
+if.app-id = 'com.mathworks.matlab'
+run = "move-node-to-workspace V"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = "move-node-to-workspace M"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
 run = "move-node-to-workspace C"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Notes'
+run = "move-node-to-workspace O"
+
+[[on-window-detected]]
+if.app-id = 'notion.id'
+run = "move-node-to-workspace N"
+
+[[on-window-detected]]
+if.app-id = 'com.culturedcode.ThingsMac'
+run = "move-node-to-workspace T"
+
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = "move-node-to-workspace D"
 
