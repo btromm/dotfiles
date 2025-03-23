@@ -5,12 +5,13 @@ alias g="git clone"
 alias gc="git commit -m"
 alias ga="git add"
 alias gp="git push"
-alias g = "git pull"
 alias ls="eza --icons --git -a"
 alias cd="z"
 alias vim="nvim"
 
+export OLLAMA_ORIGINS=moz-extension://*,chrome-extension://*,safari-web-extension://*
 export STARSHIP_CONFIG=~/.dotfiles/starship/starship.toml
+export PATH=$PATH:/Applications/MATLAB_R2024b.app/bin
 eval "$(starship init zsh)"
 
 # ZSH UTILS
@@ -18,6 +19,8 @@ source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-high
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(zoxide init zsh)"
 unset ZSH_AUTOSUGGEST_USE_ASYNC 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#928374,bold,underline"
+
 
 # RUBY
 eval "$(rbenv init - zsh)"
@@ -38,4 +41,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-
+export PATH=$PATH:/Users/myco/.spicetify

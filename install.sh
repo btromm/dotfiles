@@ -18,6 +18,9 @@ brew install zsh-fast-syntax-highlighting
 brew install zoxide #cd replacement
 brew install eza #ls replacement
 brew install fzf # super fast fuzzy finder
+brew tap FelixKratz/formulae
+brew install sketchybar # status bar
+
 
 ### Apps
 brew install --cask alfred

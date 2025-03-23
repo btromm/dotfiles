@@ -5,9 +5,9 @@ opt.relativenumber = true
 opt.number = true
 
 -- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs
-opt.shiftwidth = 2 -- 2 spaces for indent width
-opt.softtabstop = 2
+opt.tabstop = 3 -- 2 spaces for tabs
+opt.shiftwidth = 3 -- 2 spaces for indent width
+opt.softtabstop = 3
 opt.expandtab = true -- expand tabs to spaces
 
 opt.smartindent = true
@@ -42,11 +42,10 @@ opt.updatetime = 50
 
 --opt.colorcolumn = "80"
 
--- load theme
-vim.cmd([[colorscheme catppuccin]])
-
 -- default notifs
 vim.notify = require("notify")
 
 -- conceal level
 opt.conceallevel=1
+
+vim.cmd.colorscheme('carbonfox')
