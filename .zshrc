@@ -25,20 +25,25 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#928374,bold,underline"
 # RUBY
 eval "$(rbenv init - zsh)"
 
+
+export PATH=$PATH:/Users/myco/.spicetify
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/myco/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/myco/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/myco/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/myco/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/myco/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/myco/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/myco/miniconda3/bin:$PATH"
+        export PATH="/Users/myco/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
+
+if [ -f "/Users/myco/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/Users/myco/miniforge3/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
 
-
-export PATH=$PATH:/Users/myco/.spicetify
