@@ -5,6 +5,7 @@ alias g="git clone"
 alias gc="git commit -m"
 alias ga="git add"
 alias gp="git push"
+alias gpu="git pull"
 alias ls="eza --icons --git -a"
 alias cd="z"
 alias vim="nvim"
@@ -21,29 +22,21 @@ eval "$(zoxide init zsh)"
 unset ZSH_AUTOSUGGEST_USE_ASYNC 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#928374,bold,underline"
 
-
 # RUBY
 eval "$(rbenv init - zsh)"
 
-
-export PATH=$PATH:/Users/myco/.spicetify
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/myco/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/myco/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/myco/miniforge3/etc/profile.d/conda.sh"
+    if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/myco/miniforge3/bin:$PATH"
+        export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
     fi
 fi
 unset __conda_setup
-
-if [ -f "/Users/myco/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "/Users/myco/miniforge3/etc/profile.d/mamba.sh"
-fi
 # <<< conda initialize <<<
 

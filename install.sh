@@ -6,13 +6,17 @@ brew analytics off
 
 ## Formulae
 ### Essentials
-#echo "Installing AeroSpace (window manager)"
-#brew install --cask nikitabobko/tap/aerospace
+echo "Installing AeroSpace (window manager)"
+brew install --cask nikitabobko/tap/aerospace
+defaults write com.apple.dock expose-group-apps -bool true && killall Dock
 
 ### Terminal
 echo "Installing terminal things (kitty nvim, starship, etc)"
 brew install --cask kitty
 brew install neovim
+brew install fzf
+brew install fd
+brew install ripgrep
 brew install starship
 brew install zsh-autosuggestions
 brew install zsh-fast-syntax-highlighting
@@ -41,9 +45,9 @@ source $HOME/.zshrc
 
 echo "Symlinking config files..."
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/.pandoc ~/.pandoc
 ln -s ~/.dotfiles/.aerospace.toml ~/.aerospace.toml
 ln -s ~/.dotfiles/alacritty ~/.config/alacritty
-ln -s ~/.dotfiles/neofetch ~/.config/neofetch
 ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/kitty ~/.config/kitty
 
