@@ -6,13 +6,17 @@ alias gc="git commit -m"
 alias ga="git add"
 alias gp="git push"
 alias gpu="git pull"
-alias ls="eza --icons --git -a"
-alias cd="z"
-alias vim="nvim"
+alias ls="eza --icons --git -a -s modified -r"
+if [[ -o interactive ]]; then
+    alias cd="z"
+fi
+alias f="fortune"
+alias uvi="uv venv && source .venv/bin/activate && uv pip install -r ~/base-uv.txt"
+alias uva="source .venv/bin/activate"
+alias cc="claude --dangerously-skip-permissions"
+alias occ="cd ~/Documents/Obsidian/ && cc"
 
-export OLLAMA_ORIGINS=moz-extension://*,chrome-extension://*,safari-web-extension://*
 export STARSHIP_CONFIG=~/.dotfiles/starship/starship.toml
-export PATH=$PATH:/Applications/MATLAB_R2024b.app/bin
 eval "$(starship init zsh)"
 
 # ZSH UTILS
@@ -24,19 +28,4 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#928374,bold,underline"
 
 # RUBY
 eval "$(rbenv init - zsh)"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
