@@ -31,5 +31,6 @@ echo "Symlinking config files..."
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/sldl ~/.config/sldl
-ln -s ~/.dotfiles/ghostty/config "/Users/myco/Library/Application Support/com.mitchellh.ghostty/config"
+ln -s ~/.dotfiles/ghostty/config "~/Library/Application\ Support/com.mitchellh.ghostty/config"
+
 echo "Done!"
